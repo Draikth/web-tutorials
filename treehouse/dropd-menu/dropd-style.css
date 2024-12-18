@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Gotham+Rounded:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ebd9b0;
+  font-family: 'Gotham Rounded', sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+ul.menu {
+  margin-top: 200 px;
+  width: 100%;
+  max-width: 300px;
+  color: #353b3f;
+  position: relative;
+  cursor: pointer;
+}
+
+ul.menu li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.menu .submenu {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: #353b3f;
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.menu .submenu li {
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.menu .submenu li:nth-child(1):hover {
+  background-color: #65d076;
+}
+
+.menu .submenu li:nth-child(2):hover {
+  background-color: #4b82ff;
+}
+
+.menu .submenu li:nth-child(3):hover {
+  background-color: #42b3db;
+}
+
+.menu .submenu li:nth-child(4):hover {
+  background-color: #fa7e91;
+}
+
+.menu .submenu li:nth-child(5):hover {
+  background-color: #a073ff;
+}
+
+.menu img {
+  width: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.menu:hover img {
+  transform: rotate(180deg);
+}
+
+.menu:hover .submenu {
+  top: 100%;
+  opacity: 1;
+  pointer-events: all;
+}
